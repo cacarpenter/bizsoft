@@ -23,7 +23,10 @@ public class Business {
 	private String name;
 	
 	@OneToMany
-	private final List<Employee> employees = new ArrayList<Employee>();
+	private final List<Employee> employees = new ArrayList<>();
+	
+	@OneToMany
+	private final List<Location> locations = new ArrayList<>();
 	
 	protected Business() {}
 	

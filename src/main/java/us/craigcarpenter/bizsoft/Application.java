@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Bean;
 
 import us.craigcarpenter.bizsoft.model.Business;
 import us.craigcarpenter.bizsoft.model.Employee;
-import us.craigcarpenter.bizsoft.repository.EmployeeRepository;
+import us.craigcarpenter.bizsoft.rest.EmployeeRepository;
 
 @SpringBootApplication
 public class Application {
