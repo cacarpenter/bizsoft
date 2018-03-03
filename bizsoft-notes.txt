@@ -1,6 +1,6 @@
-curl -i -X POST -H "Content-Type:application/json" -d "{ \"name\" : \"Bob's Burgers\" }" http://localhost:8080/businesses
+curl -i -X POST -H "Content-Type:application/json" -d "{ \"name\" : \"Bob's Burgers\" }" http://localhost:8080/api/v1/businesses
 
-curl -i -X POST -H "Content-Type:application/json" -d "{ \"name\" : \"Bob's Burgers #1\" }" http://localhost:8080/businesses/1/locations
+curl -i -X POST -H "Content-Type:application/json" -d "{ \"name\" : \"Bob's Burgers #1\" }" http://localhost:8080/api/v1/businesses/1/locations
 
 
-curl -i -X POST -H "Content-Type:application/json" -d "{ \"name\" : \"superuser\" }" http://localhost:8080/bizusers
+curl -i -X POST -H "Content-Type:application/json" -d "{ \"name\" : \"superuser\" }" http://localhost:8080/api/v1/bizUsers
