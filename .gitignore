@@ -28,4 +28,8 @@ hs_err_pid*
 .classpath
 bin
 
+#idea files
+.idea
+*.iml
+
 *.swap
