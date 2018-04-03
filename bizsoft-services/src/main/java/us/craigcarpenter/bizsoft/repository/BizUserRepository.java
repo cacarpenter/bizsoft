@@ -1,4 +1,4 @@
-package us.craigcarpenter.bizsoft.rest;
+package us.craigcarpenter.bizsoft.repository;
 
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.repository.query.Param;

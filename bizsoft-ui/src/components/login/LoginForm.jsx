@@ -9,20 +9,17 @@ class LoginForm extends React.Component {
 
     handleSubmit(event) {
         event.preventDefault();
+        this.props.onFormSubmit();
     }
 
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
                 <div>
-                    <label for="useremail">Email:
-                        <input type="email" id="useremail" name="useremail" required autoComplete="email"/>
-                    </label>
+                    <input type="email" id="useremail" name="useremail" required autoComplete="email" placeholder="Email"/>
                 </div>
                 <div>
-                    <label for="userx">Password:
-                        <input type="password" id="userx" name="userx" required/>
-                    </label>
+                    <input type="password" id="userx" name="userx" required placeholder="Password"/>
                 </div>
                 <input type="submit" value="Submit"/>
             </form>

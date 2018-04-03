@@ -8,7 +8,8 @@
 		<version>1.5.9.RELEASE</version>
 	</parent>
 	<groupId>us.craigcarpenter.bizsoft</groupId>
-	<artifactId>bizsoft.common</artifactId>
+	<artifactId>bizsoft.services</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
 	<name>BizSoft business software</name>
 	<description>Track employess, skills and business resources</description>
 	<dependencies>
@@ -49,8 +50,8 @@
 			<plugin>	
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
+					<source>1.9</source>
+					<target>1.9</target>
 				</configuration>
 			</plugin>
 		</plugins>

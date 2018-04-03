@@ -1,4 +1,4 @@
-package us.craigcarpenter.bizsoft.rest;
+package us.craigcarpenter.bizsoft.repository;
 
 import java.util.List;
 
