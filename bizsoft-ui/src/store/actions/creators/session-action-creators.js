@@ -14,10 +14,10 @@ export const sessionSuccess = (session) => {
     };
 }
 
-export const sessionFailed = (session) => {
+export const sessionFailed = (errMsg) => {
     return {
         type: SESSION_ACTION_TYPES.FETCH_SESSION_FAILED,
-        payload: session
+        payload: errMsg
     };
 }
 

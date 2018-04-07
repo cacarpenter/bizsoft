@@ -12,6 +12,14 @@ export default function sessionReducer(prevState = initialState, action) {
             return {
                 ...prevState, isFetching: true
             }
+        case SESSION_ACTION_TYPES.FETCH_SESSION_SUCCESS:
+            return {
+                ...prevState, isFetching: false, session: action.payload
+            }
+        case SESSION_ACTION_TYPES.FETCH_SESSION_FAILED:
+            return {
+                ...prevState, isFetching: false, errorMessage: action.payload
+            }
         default:
             return prevState;
     }
