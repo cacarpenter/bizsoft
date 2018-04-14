@@ -20,7 +20,10 @@ public class BizUser {
 	@NaturalId
 	private String name;
 
-	protected BizUser() {
+	@Column(nullable = false)
+	private boolean requirePasswordChange;
+
+	public BizUser() {
 	}
 
 	public BizUser(String name) {
