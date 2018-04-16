@@ -6,4 +6,6 @@ import java.util.Optional;
 
 public interface BizUserService {
 	Optional<BizUser> findById(String bizUserId);
+
+	BizUser createUser(BizUser user);
 }

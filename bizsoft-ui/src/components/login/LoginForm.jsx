@@ -1,30 +1,24 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 
-
-class LoginForm extends React.Component {
-    constructor(props) {
-        super(props);
-        this.handleSubmit = this.handleSubmit.bind(this);
-    }
-
-    handleSubmit(event) {
+const LoginForm = (props) => (
+    <form onSubmit={(event) => {
         event.preventDefault();
-        this.props.onFormSubmit();
-    }
+        props.onFormSubmit();
+    }}>
+        <div>
+            <input type="email" id="useremail" name="useremail" required autoComplete="email" placeholder="Email"/>
+        </div>
+        <div>
+            <input type="password" id="userx" name="userx" required placeholder="Password"/>
+        </div>
+        <input type="submit" value="Submit"/>
+    </form>
+)
 
-    render() {
-        return (
-            <form onSubmit={this.handleSubmit}>
-                <div>
-                    <input type="email" id="useremail" name="useremail" required autoComplete="email" placeholder="Email"/>
-                </div>
-                <div>
-                    <input type="password" id="userx" name="userx" required placeholder="Password"/>
-                </div>
-                <input type="submit" value="Submit"/>
-            </form>
-        );
-    }
+LoginForm.propTypes = {
+    onFormSubmit: PropTypes.func.isRequired
 }
+
 
 export default LoginForm;

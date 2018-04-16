@@ -20,4 +20,9 @@ public class BizUserServiceImpl implements BizUserService {
 	public Optional<BizUser> findById(String bizUserId) {
 		return bizUserRepository.findById(bizUserId);
 	}
+
+	@Override
+	public BizUser createUser(BizUser user) {
+		return bizUserRepository.save(user);
+	}
 }

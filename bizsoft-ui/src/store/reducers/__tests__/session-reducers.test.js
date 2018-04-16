@@ -5,6 +5,7 @@ import deepFreeze from 'deep-freeze';
 test("Fetch Session sets isFetching to true and clears other fields", () => {
     const initialState = {
         session: null,
+        isLoggedIn: false,
         isFetching: false,
         errorMessage: null
     }
@@ -15,6 +16,7 @@ test("Fetch Session sets isFetching to true and clears other fields", () => {
     });
     const expectedState = {
         session: null,
+        isLoggedIn: false,
         isFetching: true,
         errorMessage: null
     }
@@ -24,6 +26,7 @@ test("Fetch Session sets isFetching to true and clears other fields", () => {
 test("Fetch Session Success sets isFetching to false and sets session", () => {
     const initialState = {
         session: null,
+        isLoggedIn: false,
         isFetching: true,
         errorMessage: null
     }
@@ -34,6 +37,7 @@ test("Fetch Session Success sets isFetching to false and sets session", () => {
     });
     const expectedState = {
         session: {email: 'test.example@email.com'},
+        isLoggedIn: true,
         isFetching: false,
         errorMessage: null
     }
@@ -43,6 +47,7 @@ test("Fetch Session Success sets isFetching to false and sets session", () => {
 test("Fetch Session Failure sets isFetching to false and sets errorMessage", () => {
     const initialState = {
         session: null,
+        isLoggedIn: false,
         isFetching: true,
         errorMessage: null
     }
@@ -50,6 +55,7 @@ test("Fetch Session Failure sets isFetching to false and sets errorMessage", () 
     const action = sessionFailed('Something Bad Happened');
     const expectedState = {
         session: null,
+        isLoggedIn: false,
         isFetching: false,
         errorMessage: 'Something Bad Happened'
     }
