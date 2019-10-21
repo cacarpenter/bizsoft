@@ -37,17 +37,22 @@ const store = configureStore();
 //     }
 // }
 
-class App extends Component {
-    render() {
-        return (
-            <Provider store={store}>
-                <Router>
-                    <Routes/>
-                </Router>
-            </Provider>
-        );
-    }
-}
+// class App extends Component {
+//     render() {
+//         return (
+//             <Provider store={store}>
+//                 <Router>
+//                     <Routes/>
+//                 </Router>
+//             </Provider>
+//         );
+//     }
+// }
 
+ class App extends Component {
+     render() {
+        return (<h1>BizSoft</h1>);
+     }
+ }
 
 export default App;
