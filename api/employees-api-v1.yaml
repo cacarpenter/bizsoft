@@ -29,6 +29,18 @@ paths:
                 $ref: "#/components/schemas/Error"
     post:
       summary: Create an employee
+      operationId: createEmployees
+      tags:
+        - employees
+      responses:
+        '201':
+          description: Null response
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
 components:
   schemas:
     PageInfo:
@@ -64,6 +76,17 @@ components:
         payload:
           items:
             $ref: '#/components/schemas/Employee'
+    Error:
+      type: object
+      required:
+        - code
+        - message
+      properties:
+        code:
+          type: integer
+          format: int32
+        message:
+          type: string
   parameters:
     pageSizeParam:
       name: pageSize
