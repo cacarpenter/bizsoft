@@ -5,7 +5,8 @@ info:
 paths:
   /employees:
     get:
-      description: Returns all employees from the system that the user has access to
+      summary: Returns all employees from the system that the user has access to
+      operationId: findEmployees
       parameters:
         - name: pageSize
           in: query
@@ -29,7 +30,7 @@ paths:
                 $ref: "#/components/schemas/Error"
     post:
       summary: Create an employee
-      operationId: createEmployees
+      operationId: createEmployee
       tags:
         - employees
       responses:
@@ -41,6 +42,14 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Error"
+  /employees/{employeeId}:
+    get:
+      summary: Retreive an employ with ID
+      operationId: findEmployeeById
+      tags:
+        - employees
+      parameters:
+        - name: employeeId
 components:
   schemas:
     PageInfo:
